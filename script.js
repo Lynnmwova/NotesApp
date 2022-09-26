@@ -64,4 +64,10 @@ addBox.addEventListener(`click`, ()=> {
     popupBox.classList.add(`show`)
 });
 
-
+closeIcon.addEventListener(`click`, (e)=>{
+    isUpdate = false;
+    titleEl.value = '';
+    descEl.value = '';
+    addBtn.innerText = 'Add Note';
+    popupTitle.innerText = 'Add a new note';
+})
