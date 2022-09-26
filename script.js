@@ -79,7 +79,7 @@ addBtn.addEventListener(`click`, (event)=>{
     let noteTitle = titleEl.value,
     noteDesc = descEl.value;
     if(noteTitle|| noteDesc){
-        let dateEl = new Date(),
+        let dateEl = new Date();
         month = months[dateEl.getMonth()],
         day = dateEl.getDate(),
         year = dateEl.getFullYear();
@@ -89,7 +89,7 @@ addBtn.addEventListener(`click`, (event)=>{
     let noteInfo = {
         title: noteTitle,
         description: noteDesc,
-        date: `${month} ${day} ${year}`
+        date: `${month}, ${day}, ${year}`
     }
     
     if (!isUpdate) {
