@@ -31,3 +31,37 @@ function showNotes(){
     });
 
 }
+/* End of first function */
+
+showNotes();
+
+/*Function two */
+function deleteNote(noteId){
+    let confirmDelete= confirm ("Are you sure you want to dispose this work of art?");
+    if (!confirmDelete) return;
+    notes.splice(noteId, 1);
+    localStorage.setItem(`notes`, JSON.stringify(notes));
+    showNotes();
+}
+/*End  of function two*/
+
+
+/* Start of function three */
+function updateNote(noteId, title, desc){
+    isUpdate = true;
+    updateId = noteId;
+    addBox.click();
+    titleEl.value = title;
+    descEl.values = desc;
+    addBtn.innerText = 'Edit note';
+    popupTitle.innerText = 'Editing note';
+
+}
+/* End of function three */
+
+addBox.addEventListener(`click`, ()=> {
+    titleEl.focus();
+    popupBox.classList.add(`show`)
+});
+
+
