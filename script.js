@@ -64,10 +64,44 @@ addBox.addEventListener(`click`, ()=> {
     popupBox.classList.add(`show`)
 });
 
-closeIcon.addEventListener(`click`, (e)=>{
+closeIcon.addEventListener(`click`, (event)=>{
     isUpdate = false;
     titleEl.value = '';
     descEl.value = '';
     addBtn.innerText = 'Add Note';
     popupTitle.innerText = 'Add a new note';
-})
+    popupBox.classList.remove(`show`);
+});
+
+/* Inspect this section */
+addBtn.addEventListener(`click`, (event)=>{
+    event.preventDefault();
+    let noteTitle = titleEl.value,
+    noteDesc = descEl.value;
+    if(noteTitle|| noteDesc){
+        let dateEl = new Date(),
+        month = months[dateEl.getMonth()],
+        day = dateEl.getDate(),
+        year = dateEl.getFullYear();
+
+    }
+
+    let noteInfo = {
+        title: noteTitle,
+        description: noteDesc,
+        date: `${month} ${day} ${year}`
+    }
+    
+    if (!isUpdate) {
+        notes.push(noteInfo);
+    }else{
+        isUpdate = false;
+        notes[updateId] = noteInfo;
+    }
+    
+    localStorage.setItem('notes', JSON.stringify(notes));
+    closeIcon.click();
+    showNotes();
+
+
+});
