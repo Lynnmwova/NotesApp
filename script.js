@@ -13,5 +13,21 @@ let isUpdate = false, updateId;
 
 /* Start of first function */
 function showNotes(){
-    
+    document.querySelectorAll(`.note`) .forEach(note => note.remove());
+    notes.forEach ((note , index)=>{
+        let liEl = `<li class="note"> 
+        <div class='details'> 
+        <p> ${note.title}</p>
+        <span>${note.description}</span>
+        </div>
+        <div class= "settings">
+        <i onClick="updateNote(${index}, '${note.title}', '${note.description}')" class="uil uil-edit"></i>
+        <i onClick="deleteNote(${index})" class="uil uil-trash"></i>
+        </div>
+        
+        </div>
+        </li>`;
+        addBox.insertAdjacentHTML('afterend' , liEl);
+    });
+
 }
