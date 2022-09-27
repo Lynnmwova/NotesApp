@@ -3,8 +3,8 @@
 
 :root{
     
-    --primaryColor:#0e153a;
-    --secondarycolor: #e2f3f5;
+    --primaryColor: #093028 ;
+    --secondarycolor:#e2f3f5 ;
     --primaryText: #3d5af1;
 }
 
@@ -19,6 +19,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
 }
 body{
     /* background: var(--primaryColor); */
@@ -67,7 +68,7 @@ body{
 }
 .note p{
     font-size: 22px;
-    font-weight: 500;
+    font-weight: bold;
     color: var(--primaryColor);
 }
 .note span{
@@ -82,7 +83,7 @@ body{
 }
 .bottom-content .settings i{
     color: var(--primaryText);
-    font-size: 15px;
+    font-size: 20px;
     cursor: pointer !important;
     padding: 0 10px;
     
@@ -129,7 +130,7 @@ body{
 }
 .content header p{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: bolder;
 }
 .content header i{
     color: #575757;
@@ -145,6 +146,7 @@ body{
 form .row label{
     display: block;
     font-size: 18px;
+    font-weight: bold;
     margin-bottom: 6px;
 }
 
