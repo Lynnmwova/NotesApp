@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
 :root{
     
     --primaryColor:#0e153a;
@@ -12,13 +14,16 @@
 
 
 *{
+    overflow:hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 body{
-    background: var(--primaryColor);
+    /* background: var(--primaryColor); */
+    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .wrapper{
     margin: 50px;

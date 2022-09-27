@@ -73,7 +73,7 @@ closeIcon.addEventListener(`click`, (event)=>{
     popupBox.classList.remove(`show`);
 });
 
-/* Inspect this section */
+/* Inspect this section to debug */
 addBtn.addEventListener(`click`, (event)=>{
     event.preventDefault();
     let noteTitle = titleEl.value,
@@ -89,7 +89,7 @@ addBtn.addEventListener(`click`, (event)=>{
     let noteInfo = {
         title: noteTitle,
         description: noteDesc,
-        date: `${month}, ${day}, ${year}`
+        date: `${month}, ${day}, ${year}`,
     }
     
     if (!isUpdate) {
